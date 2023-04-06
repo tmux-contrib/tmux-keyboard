@@ -1,13 +1,21 @@
-# tmux-keyboard-layout
-tmux plugin that shows current keyboard layout (linux, mac)
+# tmux-keyboard
 
-usage: #{keyboard_layout}
+This plugin displays the current keyboard layout.
 
-update time depends on status-interval option
+## Installation
 
-shows local keyboard layout only, 
-so it works predictable only in tmux->ssh, but not in ssh->tmux
+This is a plugin for [tmux plugin
+manager](https://github.com/tmux-plugins/tpm). You can install it by adding the
+following line in your tmux config.
 
-# License
+```shell
+set -g @plugin 'tmux-contrib/tmux-keyboard'
+```
 
-MIT
+## Getting Started
+
+You can use the `#{keyboard_layout}` variable in your existing status line.
+
+```shell
+set-option -g status-right '#{keyboard_layout}'
+```
