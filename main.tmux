@@ -3,10 +3,10 @@
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # shellcheck disable=1090
-source "${CURRENT_DIR}/scripts/helpers.sh"
+source "${CURRENT_DIR}/scripts/tmux-core.sh"
 
 # shellcheck disable=1090
-keyboard_layout="#(${CURRENT_DIR}/scripts/keyboard.sh)"
+keyboard_layout="#(${CURRENT_DIR}/scripts/tmux-keyboard.sh)"
 keyboard_layout_pattern="\#{keyboard_layout}"
 
 tmux_update_option() {
