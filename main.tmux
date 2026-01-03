@@ -32,15 +32,15 @@ keyboard_layout_pattern="\#{keyboard_layout}"
 #   $1 - The name of the tmux option to update (e.g., "status-right")
 # Returns:
 #   0 on success
-tmux_update_option() {
+_tmux_update_option() {
 	local option="$1"
 	local option_value
 	local new_option_value
 
-	option_value="$(tmux_get_option "$option")"
-	new_option_value="$(tmux_interpolate "$option_value" "$keyboard_layout_pattern" "$keyboard_layout")"
+	option_value="$(_tmux_get_option "$option")"
+	new_option_value="$(_tmux_interpolate "$option_value" "$keyboard_layout_pattern" "$keyboard_layout")"
 
-	tmux_set_option "$option" "$new_option_value"
+	_tmux_set_option "$option" "$new_option_value"
 }
 
 # Main entry point for the plugin.
