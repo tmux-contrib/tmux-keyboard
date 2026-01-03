@@ -11,12 +11,12 @@
 # Example:
 #   set -g status-right "#{keyboard_layout} | %H:%M"
 
-CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+_tmux_keyboard_root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# shellcheck source=scripts/core.sh
-source "${CURRENT_DIR}/scripts/core.sh"
+# shellcheck source=scripts/tmux_keyboard_core.sh
+source "$_tmux_keyboard_root_dir/scripts/tmux_keyboard_core.sh"
 
-keyboard_layout="#(${CURRENT_DIR}/scripts/tmux-keyboard.sh)"
+keyboard_layout="#($_tmux_keyboard_root_dir/scripts/tmux_keyboard.sh)"
 keyboard_layout_pattern="\#{keyboard_layout}"
 
 # Update a tmux option by interpolating the keyboard layout pattern.
