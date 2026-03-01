@@ -1,37 +1,28 @@
 #!/usr/bin/env bash
+set -euo pipefail
+[[ -z "${DEBUG:-}" ]] || set -x
 
-# tmux-keyboard plugin entry point.
-#
-# This plugin provides a #{keyboard_layout} format string that displays
-# the current keyboard layout in the tmux status bar.
-#
-# Usage:
-#   Add #{keyboard_layout} to your status-left or status-right option.
-#
-# Example:
-#   set -g status-right "#{keyboard_layout} | %H:%M"
+_tmux_keyboard_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-_tmux_root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+[[ -f "$_tmux_keyboard_root/scripts/tmux_core.sh" ]] || {
+	echo "tmux-keyboard: missing tmux_core.sh" >&2
+	exit 1
+}
 
 # shellcheck source=scripts/tmux_core.sh
-source "$_tmux_root_dir/scripts/tmux_core.sh"
+source "$_tmux_keyboard_root/scripts/tmux_core.sh"
 
-keyboard_layout="#($_tmux_root_dir/scripts/tmux_keyboard.sh)"
+keyboard_layout="#($_tmux_keyboard_root/scripts/tmux_keyboard.sh)"
 keyboard_layout_pattern="\#{keyboard_layout}"
 
-# Update a tmux option by interpolating the keyboard layout pattern.
-#
-# Retrieves the current value of the specified tmux option, replaces any
-# occurrences of #{keyboard_layout} with the actual keyboard layout command,
-# and sets the option to the new value.
-#
-# Globals:
-#   keyboard_layout - The tmux command string to get keyboard layout
-#   keyboard_layout_pattern - The pattern to replace (#{keyboard_layout})
-# Arguments:
-#   $1 - The name of the tmux option to update (e.g., "status-right")
-# Returns:
-#   0 on success
+_tmux_interpolate() {
+	local content=$1
+	local pattern=$2
+	local value=$3
+
+	echo "${content/$pattern/$value}"
+}
+
 _tmux_update_option() {
 	local option="$1"
 	local option_value
@@ -43,17 +34,6 @@ _tmux_update_option() {
 	_tmux_set_option "$option" "$new_option_value"
 }
 
-# Main entry point for the plugin.
-#
-# Initializes the keyboard layout plugin by updating the status-right
-# and status-left options to interpolate the keyboard_layout pattern.
-#
-# Globals:
-#   None
-# Arguments:
-#   None
-# Returns:
-#   0 on success
 main() {
 	_tmux_update_option "status-right"
 	_tmux_update_option "status-left"
