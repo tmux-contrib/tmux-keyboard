@@ -1,6 +1,6 @@
 # tmux-keyboard
 
-A tmux plugin that displays the current keyboard layout in the status bar.
+Show your current keyboard layout in the tmux status bar — supports macOS and Linux.
 
 ## Installation
 
