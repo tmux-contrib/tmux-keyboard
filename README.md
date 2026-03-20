@@ -1,8 +1,8 @@
 # tmux-keyboard
 
-[![Test](https://github.com/tmux-contrib/tmux-keyboard/actions/workflows/test.yml/badge.svg)](https://github.com/tmux-contrib/tmux-keyboard/actions/workflows/test.yml) [![Release](https://img.shields.io/github/v/release/tmux-contrib/tmux-keyboard)](https://github.com/tmux-contrib/tmux-keyboard/releases) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+> Show your current keyboard layout in the tmux status bar — supports macOS and Linux.
 
-Show your current keyboard layout in the tmux status bar — supports macOS and Linux.
+[![Test](https://github.com/tmux-contrib/tmux-keyboard/actions/workflows/test.yml/badge.svg)](https://github.com/tmux-contrib/tmux-keyboard/actions/workflows/test.yml) [![Release](https://img.shields.io/github/v/release/tmux-contrib/tmux-keyboard)](https://github.com/tmux-contrib/tmux-keyboard/releases) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Installation
 
