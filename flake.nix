@@ -13,6 +13,7 @@
       in
       {
         devShells.default = pkgs.mkShell {
+          name = "tmux-keyboard";
           packages = with pkgs; [
             bash
             tmux
