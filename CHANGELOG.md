@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/tmux-contrib/tmux-keyboard/compare/v0.2.1...v0.2.2) (2026-05-04)
+
+
+### Bug Fixes
+
+* **github:** correct action versions in update.yml ([4c585fa](https://github.com/tmux-contrib/tmux-keyboard/commit/4c585fa41fe668c30378abaeeb16c924ed6a47f0))
+
 ## [0.2.1](https://github.com/tmux-contrib/tmux-keyboard/compare/v0.2.0...v0.2.1) (2026-04-16)
 
 
