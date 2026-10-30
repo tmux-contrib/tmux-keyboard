@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/tmux-contrib/tmux-keyboard/compare/v0.2.2...v0.2.3) (2026-10-30)
+
+
+### Bug Fixes
+
+* replace every #{keyboard_layout} placeholder in a status option ([#34](https://github.com/tmux-contrib/tmux-keyboard/issues/34)) ([fd0901c](https://github.com/tmux-contrib/tmux-keyboard/commit/fd0901c636e86b295adab60891e8798b695b2c79))
+
 ## [0.2.2](https://github.com/tmux-contrib/tmux-keyboard/compare/v0.2.1...v0.2.2) (2026-05-04)
 
 
