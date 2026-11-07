@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.4](https://github.com/tmux-contrib/tmux-keyboard/compare/v0.2.3...v0.2.4) (2026-11-07)
+
+
+### Bug Fixes
+
+* **ci:** merge with the App token so main gets its CI run ([#37](https://github.com/tmux-contrib/tmux-keyboard/issues/37)) ([1048786](https://github.com/tmux-contrib/tmux-keyboard/commit/10487861ee87a86d4a3e0780c4151f1152e37e11))
+
 ## [0.2.3](https://github.com/tmux-contrib/tmux-keyboard/compare/v0.2.2...v0.2.3) (2026-10-30)
 
 
