@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.5](https://github.com/tmux-contrib/tmux-keyboard/compare/v0.2.4...v0.2.5) (2026-11-14)
+
+
+### Bug Fixes
+
+* **linux:** uppercase keyboard layout code ([b9399ee](https://github.com/tmux-contrib/tmux-keyboard/commit/b9399eed51e3c537059bf579049cb2ccde15ed5f))
+
 ## [0.2.4](https://github.com/tmux-contrib/tmux-keyboard/compare/v0.2.3...v0.2.4) (2026-11-07)
 
 
